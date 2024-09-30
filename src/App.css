@@ -1,0 +1,45 @@
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 259px 1fr;
+  grid-template-rows: 54px 1fr 81px;
+  background-color: #111111;
+}
+
+.Nav {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: #111111;
+}
+
+.Sidebar {
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  background-color: #111111;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.Sidebar button{
+  background-color: #111111;
+  color: white;
+}
+
+.MainMenu {
+  border: solid;
+  background-color: #111111;
+  border-color: #333842;
+  border-width: 1px;
+  border-radius: 10px;
+}
+
+.SongPlayer {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  background-color: #333842;
+}
+
