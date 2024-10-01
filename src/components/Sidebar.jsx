@@ -12,23 +12,23 @@ const Sidebar = () => {
     return (
         <div className="Sidebar">
             <button>
-                <img src={pinsIcon} className="pins" /> pins </button>
+                <img src={pinsIcon} className="pins" />Pins</button>
             <button>
-                <img src={playlistsIcon} className="playlists" />playlists</button>
+                <img src={playlistsIcon} className="playlists" />Playlists</button>
             <button>
-                <img src={likedsongsIcon} className="likedsongs" />likedsongs</button>
+                <img src={likedsongsIcon} className="likedsongs" />Liked songs</button>
             <button>
-                <img src={savesIcon} className="saves" />saves</button>
+                <img src={savesIcon} className="saves" />Saves</button>
             <button>
-                <img src={albumsIcon} className="albums" />albums</button>
+                <img src={albumsIcon} className="albums" />Albums</button>
             <button>
-                <img src={foldersIcon} className="folders" />folders</button>
+                <img src={foldersIcon} className="folders" />Folders</button>
             <button>
-                <img src={podcastsIcon} className="podcasts" />podcasts</button>
+                <img src={podcastsIcon} className="podcasts" />Podcasts</button>
             <button>
-                <img src={audiobooksIcon} className="audiobooks" />audiobooks</button>
+                <img src={audiobooksIcon} className="audiobooks" />Audiobooks</button>
             <button>
-                <img src={artistsIcon} className="artists" />artists</button>
+                <img src={artistsIcon} className="artists" />Artists</button>
         </div>
     ) 
 }

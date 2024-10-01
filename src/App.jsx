@@ -7,7 +7,7 @@ import Nav from './components/Nav';
 
 function App() {
   return (
-      <div class="main-container">
+      <div className="main-container">
         <Nav />
         <MainMenu />
         <Sidebar />
