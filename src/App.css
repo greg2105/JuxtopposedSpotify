@@ -11,6 +11,31 @@
   grid-column-start: 1;
   grid-column-end: 3;
   background-color: #111111;
+  display: flex;
+  align-items: center;
+}
+
+.navRightIcons {
+  display: flex;
+  margin-left: auto;
+  margin-right: 10px;
+  justify-content: space-between;
+  gap: 2px;
+}
+
+.navRightIcons button {
+  background-color: #111111;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  text-align: center;
+}
+
+.navRightIcons button img{
+  margin: auto;
+  vertical-align: auto;
+  width: 40px;
+  height: 40px;
 }
 
 .Sidebar {
@@ -27,6 +52,14 @@
 .Sidebar button{
   background-color: #111111;
   color: white;
+  display: flex;
+  align-items: center;
+}
+
+.Sidebar button img{
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
 }
 
 .MainMenu {
@@ -35,11 +68,16 @@
   border-color: #333842;
   border-width: 1px;
   border-radius: 10px;
+  margin-right: 4px;
 }
 
 .SongPlayer {
   grid-column-start: 2;
   grid-column-end: 3;
   background-color: #333842;
+  border-radius: 10px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-right: 4px;
 }
 
