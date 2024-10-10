@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // importing the icons
 import notifications from '../assets/notifications.svg';
@@ -17,6 +17,34 @@ import searchUnselected from '../assets/searchSelected.svg';
 
 const Nav = () => {
     const [activeTab, setActiveTab] = useState(0);
+    const [homeImgSource, setHomeImg] = useState(homeUnselected);
+    const [discoverImgSource, setDiscoverImg] = useState(discoverUnselected);
+    const [searchImgSource, setSearchImg] = useState(searchUnselected);
+
+    useEffect(() => {
+        switch (activeTab) {
+            case 0:
+                setHomeImg(homeSelected);
+                setDiscoverImg(discoverUnselected);
+                setSearchImg(searchUnselected);
+                break;
+            case 1:
+                setHomeImg(homeUnselected);
+                setDiscoverImg(discoverSelected);
+                setSearchImg(searchUnselected);
+                break;
+            case 2:
+                setHomeImg(homeUnselected);
+                setDiscoverImg(discoverUnselected);
+                setSearchImg(searchSelected);
+                break;
+            default:
+                setHomeImg(homeUnselected);
+                setDiscoverImg(discoverUnselected);
+                setSearchImg(searchUnselected);
+                break;
+        }
+    }, [activeTab]);
 
     const handleTabClick = (tabIndex) => {
         setActiveTab(tabIndex);
@@ -26,9 +54,9 @@ const Nav = () => {
         <div className="Nav">
             <button className="myLibrary"><img src={library} alt="" />My Library</button>
             <div className="navLeftTabs">
-                <button className={`HomeButton${activeTab === 0 ? 'active' : ''}`} onClick={() => handleTabClick(0)}><img src={activeTab === 0 ? homeSelected : homeUnselected} alt="" /></button>
-                <button className={`DiscoverButton${activeTab === 1 ? 'active' : ''}`} onClick={() => handleTabClick(1)}><img src={activeTab === 1 ? discoverSelected : discoverUnselected} alt="" /></button>
-                <button className={`SearchButton${activeTab === 2 ? 'active' : ''}`} onClick={() => handleTabClick(2)}><img src={activeTab === 2 ? searchSelected : searchUnselected} alt="" /></button>
+                <button className={`HomeButton${activeTab === 0 ? 'active' : ''}`} onClick={() => handleTabClick(0)}><img src={homeImgSource} alt="" /></button>
+                <button className={`DiscoverButton${activeTab === 1 ? 'active' : ''}`} onClick={() => handleTabClick(1)}><img src={discoverImgSource} alt="" /></button>
+                <button className={`SearchButton${activeTab === 2 ? 'active' : ''}`} onClick={() => handleTabClick(2)}><img src={searchImgSource} /></button>
             </div>
             <div className="navRightIcons"> 
                 <button className="notificationsButton"><img src={notifications} alt="" /></button> 

@@ -1,0 +1,10 @@
+made for you
+/v1/browse/categories/{category_id}/playlists
+
+your top mixes or top tracks
+/v1/me/top/tracks
+/v1/me/top/artists
+
+your favorite artists
+/v1/me/following?type=artist
+

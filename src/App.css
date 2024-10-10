@@ -49,9 +49,20 @@
   gap: 5px;
   align-items: center;
   justify-content: left;
-  background-color: #111111;
   width: 150px;
   height: 43px;
+}
+
+.navLeftTabs button:focus {
+  outline: 2px solid transparent;
+}
+
+.HomeButton, .SearchButton, .DiscoverButton {
+  background-color: #111111;
+}
+
+.HomeButtonactive, .SearchButtonactive, .DiscoverButtonactive {
+  background-color: #33353a;
 }
 
 .myLibrary {
@@ -83,10 +94,17 @@
 
 .MenuButtonContainer button{
   display: inline-block;
-  background-color: #33353a;
   margin-right: 7px;
   font-size: 12px;
   text-align: center;
+}
+
+.MenuButtonContainer button:focus{
+  outline: 2px solid transparent;
+}
+
+.All, .Music, .Podcasts, .Audiobooks {
+  background-color: #33353a;
   color: rgba(255,255,255,.7);
 }
 
